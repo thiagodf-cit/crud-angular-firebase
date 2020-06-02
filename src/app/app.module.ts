@@ -9,10 +9,14 @@ import { environment } from '../environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { EditComponent } from './contacts/edit/edit.component';
+import { ListComponent } from './contacts/list/list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
