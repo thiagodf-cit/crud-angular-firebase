@@ -29,12 +29,14 @@ export class ContactService {
       .snapshotChanges()
       .pipe(
         map(changes => {
-          return changes.map(c => ({ key: c.payload.key, ...c.payload.val }));
+          return changes.map(c => ({
+            key: c.payload.key, ...c.payload.exportVal()
+          }));
         })
       );
   }
 
   delete(key: string) {
-    this.fireStore.object(`contact/$(key)`).remove();
+    this.fireStore.object('contact/' + key).remove();
   }
 }
