@@ -1,5 +1,5 @@
 export class Contact {
-    name = '';
-    email = '';
-    phone = '';
+    name: string = '';
+    email: string = '';
+    phone: string = '';
 }
