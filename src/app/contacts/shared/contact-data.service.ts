@@ -11,7 +11,7 @@ export class ContactDataService {
 
   constructor() { }
 
-  changeContact(contact: Contact, key: string){
-    this.contactSource.next({ contact: contact, key: key });
+  changeContact(contact: Contact, key: string) {
+    this.contactSource.next({ contact, key });
   }
 }
