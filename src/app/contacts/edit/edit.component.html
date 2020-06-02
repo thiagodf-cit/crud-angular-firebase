@@ -1,3 +1,22 @@
-<p>
-  edit works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Nome:</label>
+          <input type="text" class="form-control" [(ngModel)]="contact.name" name="name" placeholder="Digite o Nome..."/>
+        </div>
+        <div class="form-group">
+          <label>E-mail:</label>
+          <input type="email" class="form-control" [(ngModel)]="contact.email" name="email" placeholder="Digite o E-mail..."/>
+        </div>
+        <div class="form-group">
+          <label>Telefone:</label>
+          <input type="tel" class="form-control" [(ngModel)]="contact.phone" name="phone" placeholder="Digite o Telefone..."/>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+    </div>
+  </div>
+</div>
